@@ -1,3 +1,6 @@
 function y = funkcija(x)
-    y = sin(x .* 2)/(x .+ 1).^2;
+    y = zeros(length(x));
+    for i = 1:length(x)
+        y(i) = sin(x(i) * 2)/((x(i) + 1)^2);
+    end
 end
