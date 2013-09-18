@@ -1,8 +1,8 @@
 x = 0:0.01:10;
 y = funkcija(x);
 figure(1);
-plot(x, y);
-sak = roots([1 -31 215 -5 -2016 -1764]);
+plot(x, y, 'LineWidth', 2);
+grid on;
 x = linspace(min(sak) - 2, max(sak) + 2, 1000);
 y = daugianaris(x);
 figure(2);
