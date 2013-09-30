@@ -3,7 +3,7 @@ function R = grubus(koef)
 end
 
 function m = betterMax(vec)
-    m = vec(1);
+    m = realmin('double');
     for i = 2:length(vec)
         if vec(i) > m
             m = vec(i);
