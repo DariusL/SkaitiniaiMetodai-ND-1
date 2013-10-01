@@ -6,6 +6,7 @@ function rVec = tikslesnis(koef)
     if(R < rVec(2))
         rVec(2) = R;
     end
+    rVec(2) = rVec(2) - 2;
     koef = magic(koef);
     B = getB(koef);
     k = getK(koef);
@@ -13,6 +14,7 @@ function rVec = tikslesnis(koef)
     if(-R > rVec(1))
         rVec(1) = -R;
     end
+    rVec(1) = rVec(1) + 2;
 end
 
 function B = getB(koef)
