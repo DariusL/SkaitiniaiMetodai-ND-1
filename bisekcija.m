@@ -16,7 +16,7 @@ function vec = bisekcija(func, pradzia, pabaiga, zingsniai, tikslumas)
     end
 end
 
-function y = tikraiBisekcija(func, pradzia, pabaiga, tikslumas)
+function v = tikraiBisekcija(func, pradzia, pabaiga, tikslumas)
     v = (pradzia + pabaiga) / 2;
     y = func(v);
     zemyn = func(pradzia) > func(pabaiga);
@@ -24,9 +24,9 @@ function y = tikraiBisekcija(func, pradzia, pabaiga, tikslumas)
         return;
     else
        if((zemyn && y > 0) || (~zemyn && y < 0))
-           y = tikraiBisekcija(func, v, pabaiga, tikslumas);
+           v = tikraiBisekcija(func, v, pabaiga, tikslumas);
        else
-           y = tikraiBisekcija(func, pradzia, v, tikslumas);
+           v = tikraiBisekcija(func, pradzia, v, tikslumas);
        end
     end
 end
