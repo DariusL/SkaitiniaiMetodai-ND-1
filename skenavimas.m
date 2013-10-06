@@ -3,6 +3,7 @@ function vec = skenavimas(func, pradzia, pabaiga, zingsniai, tikslumas)
     zingsnis = (pabaiga - pradzia)/zingsniai;
     for i = pradzia:zingsnis:pabaiga-zingsnis
         plot(i, 0, 'or');
+        pause(0.05);
         if(func(i) * func(i + zingsnis) < 0)
             if(abs(func(i+zingsnis/2)) <= tikslumas)
                 vec = [vec i+zingsnis/2];
