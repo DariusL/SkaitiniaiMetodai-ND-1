@@ -14,7 +14,7 @@ hold on;
 %plot(dgr, 0, '^r');
 plot(dtr, 0, '^g');
 plot(x, y, '-b', 'LineWidth', 2);
-droots = skenavimas(d, dtr(1), dtr(2), 50, 0.01);
+droots = skenavimas(d, dtr(1), dtr(2), 40, 0.01);
 hold off;
 x = linspace(fr(1), fr(2), 1000);
 y = f(x);
